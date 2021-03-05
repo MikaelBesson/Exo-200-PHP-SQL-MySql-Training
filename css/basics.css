@@ -18,5 +18,13 @@ th {
 
 td {
   padding: 10px;
+  border: 1px solid black;
+  background-color: #d9d3d3;
+}
+
+table {
+  margin: auto;
+  border-collapse: separate;
+  border: 1px solid black;
 }
 
