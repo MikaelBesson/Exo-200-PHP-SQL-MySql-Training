@@ -26,6 +26,7 @@ try {
     $result = $search->execute();
     if ($result) { ?>
         <table>
+        <thead>
             <tr>
                 <th>name</th>
                 <th>difficulty</th>
@@ -33,16 +34,19 @@ try {
                 <th>duration</th>
                 <th>height difference</th>
             </tr>
-        <?php foreach ($search->fetchAll() as $hiking) { ?>
+        </thead>
+        <tbody>
+            <?php foreach ($search->fetchAll() as $hiking) { ?>
             <tr>
                 <td><?= $hiking['name'] ?></td>
                 <td><?= $hiking['difficulty'] ?></td>
                 <td><?= $hiking['distance'] ?></td>
                 <td><?= $hiking['duration'] ?></td>
                 <td><?= $hiking['height_difference'] ?></td>
-            </tr>
+            </tr><?php } ?>
+        </tbody>
        </table> <?php
-        }
+
      }
 
 }
